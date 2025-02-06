@@ -72,6 +72,15 @@ class Main(MainTemplate):
       self.subscribe_textbox.text = None
       Notification("Thanks for subscribing!").show()
 
+  def drop_down_1_change(self, **event_args):
+    """This method is called when an item is selected"""
+    pass
+
+  def text_area_1_change(self, **event_args):
+    """This method is called when the text in this text area is edited"""
+    pass
+
+
 
 
 
