@@ -10,6 +10,10 @@ components:
     name: data_row_panel_1
     properties: {}
     type: DataRowPanel
+  - layout_properties: {grid_position: 'ZRWLHC,QOBXHE'}
+    name: button_1
+    properties: {text: button_1}
+    type: Button
   - components:
     - layout_properties: {grid_position: 'NIFEPB,FEBQXU XCICFK,QOMZGK'}
       name: image_1
