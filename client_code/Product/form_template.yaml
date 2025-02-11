@@ -3,7 +3,7 @@ components:
   - {code: 'self.item[''name'']', property: text}
   layout_properties: {grid_position: 'LDDFIO,MIORVE'}
   name: label_1
-  properties: {align: center, background: '', bold: false, border: '', font: Yeseva One, font_size: 18, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: none, text: '', tooltip: '', underline: false, visible: true}
+  properties: {align: center, background: '', bold: false, border: '', font: Yeseva One, font_size: 18, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: none, text: lorem, tooltip: '', underline: false, visible: true}
   type: Label
 - components:
   - layout_properties: {col_xs: 1, row: DXXJMV, width_xs: 4}
