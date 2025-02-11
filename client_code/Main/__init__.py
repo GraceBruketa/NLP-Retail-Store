@@ -76,9 +76,21 @@ class Main(MainTemplate):
     """This method is called when an item is selected"""
     pass
 
-  def text_area_1_change(self, **event_args):
+  def searchInput_change(self, **event_args):
     """This method is called when the text in this text area is edited"""
     pass
+
+  def searchBut_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    
+    search = self.searchInput.text
+    alert(search)
+
+  def searchInput_pressed_enter(self, **event_args):
+    """This method is called when the user presses Enter in this text box"""
+    alert(event_args)
+    
+    print(event_args.content)
 
 
 
