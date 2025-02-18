@@ -85,6 +85,8 @@ class Main(MainTemplate):
     
     search = self.searchInput.text
     alert(search)
+    anvil.server.call('procces_words',search)
+    
 
   def searchInput_pressed_enter(self, **event_args):
     """This method is called when the user presses Enter in this text box"""
