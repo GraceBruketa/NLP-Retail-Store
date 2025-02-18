@@ -26,4 +26,6 @@ def add_subscriber(email):
 @anvil.server.callable
 def add_order(charge_id, cart_items):
   app_tables.orders.add_row(charge_id=charge_id, order=cart_items)
+
+@
   
