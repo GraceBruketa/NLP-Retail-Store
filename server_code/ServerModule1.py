@@ -34,4 +34,8 @@ def procces_words(text):
   doc = nlp(text)
   print("Noun phrases:", [chunk.text for chunk in doc.noun_chunks])
   print("Verbs:", [token.lemma_ for token in doc if token.pos_ == "VERB"])
+  # extract adjectives
+  print("Adjectives:", [token.text for token in doc if token.pos_ == "ADJ"])  # Surface form
+  # OR for lemmas (like verbs):
+  print("Adjectives (lemmas):", [token.lemma_ for token in doc if token.pos_ == "ADJ"])
   
