@@ -7,9 +7,11 @@ from anvil.tables import app_tables
 import anvil.server
 from datetime import datetime
 import stripe
-impor
+import en_core_web_sm
+
 import anvil.email
 
+nlp = en_core_web_sm.load()
 @anvil.server.callable
 def add_message(name, email, message):
   app_tables.contact.add_row(name=name, email=email, message=message, date=datetime.now())
