@@ -18,7 +18,7 @@ class Main(MainTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    self.navigate(self.home_link, Home())
+    # self.navigate(self.home_link, Home())
     self.cart_items = []
     
     for link in [self.home_link_copy, self.shop_link_copy, self.about_link_copy, self.contact_link_copy, self.insta_link_copy, self.link_1_copy, self.cart_link_copy]:
