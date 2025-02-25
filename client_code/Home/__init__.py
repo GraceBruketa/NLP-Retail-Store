@@ -15,6 +15,7 @@ class Home(HomeTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     best_sellers = app_tables.products.search(best_seller=True)
+  
     
     self.banner.role = ['spaced-title', 'left-right-padding']
     

@@ -1,2 +1,3 @@
 stripe
 spacy==3.7.5
+pandas==2.2.0
