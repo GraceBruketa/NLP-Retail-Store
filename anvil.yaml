@@ -1,6 +1,14 @@
 allow_embedding: false
 correct_dependency_ids: {}
 db_schema:
+  clothes:
+    client: none
+    columns:
+    - admin_ui: {order: 0, width: 200}
+      name: id
+      type: string
+    server: full
+    title: Clothes
   contact:
     client: none
     columns:
@@ -69,8 +77,8 @@ runtime_options:
   server_version: python3-sandbox
   version: 2
 services:
-- client_config: {}
-  server_config: {}
+- client_config: {enable_v2: false}
+  server_config: {auto_create_missing_columns: true}
   source: /runtime/services/tables.yml
 - client_config: {}
   server_config: {}
@@ -80,3 +88,4 @@ services:
   source: /runtime/services/stripe.yml
 startup: {module: Main, type: form}
 startup_form: null
+uplink_visible: true
