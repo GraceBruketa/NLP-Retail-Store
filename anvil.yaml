@@ -3,10 +3,7 @@ correct_dependency_ids: {}
 db_schema:
   clothes:
     client: none
-    columns:
-    - admin_ui: {order: 0, width: 200}
-      name: id
-      type: string
+    columns: []
     server: full
     title: Clothes
   contact:

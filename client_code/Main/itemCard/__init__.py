@@ -16,3 +16,4 @@ class itemCard(itemCardTemplate):
 
     # Any code you write here will run before the form opens.
     print(f"self.item = {self.item}")
+    
