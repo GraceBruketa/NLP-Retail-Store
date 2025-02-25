@@ -48,6 +48,10 @@ components:
       name: image_8
       properties: {}
       type: Image
+    - layout_properties: {grid_position: 'NIFEPB,YIAAMQ'}
+      name: test
+      properties: {text: test}
+      type: Label
     layout_properties: {full_width_row: true, grid_position: 'NKOLLA,JVUOAT'}
     name: column_panel_1
     properties: {background: '', border: '', col_spacing: medium, col_widths: '{}', foreground: '', role: null, spacing_above: none, spacing_below: small, tooltip: '', visible: true, wrap_on: mobile}
