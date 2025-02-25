@@ -20,7 +20,7 @@ class Main(MainTemplate):
     self.init_components(**properties)
     # self.navigate(self.home_link, Home())
     self.cart_items = []
-    self.repeating_items_panel_ = app_tables.clothes()
+    # self.repeating_items_panel_ = app_tables.clothes()
     
     for link in [self.home_link_copy, self.shop_link_copy, self.about_link_copy, self.contact_link_copy, self.insta_link_copy, self.link_1_copy, self.cart_link_copy]:
       link.role = ['spaced-title', 'display-responsive']
