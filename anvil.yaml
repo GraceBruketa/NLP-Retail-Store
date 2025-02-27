@@ -3,7 +3,37 @@ correct_dependency_ids: {}
 db_schema:
   clothes:
     client: none
-    columns: []
+    columns:
+    - admin_ui: {width: 200}
+      name: baseColour
+      type: string
+    - admin_ui: {width: 200}
+      name: masterCategory
+      type: string
+    - admin_ui: {width: 200}
+      name: year
+      type: number
+    - admin_ui: {width: 200}
+      name: season
+      type: string
+    - admin_ui: {width: 200}
+      name: usage
+      type: string
+    - admin_ui: {width: 200}
+      name: id
+      type: number
+    - admin_ui: {width: 200}
+      name: subCategory
+      type: string
+    - admin_ui: {width: 200}
+      name: productDisplayName
+      type: string
+    - admin_ui: {width: 200}
+      name: gender
+      type: string
+    - admin_ui: {width: 200}
+      name: articleType
+      type: string
     server: full
     title: Clothes
   contact:
