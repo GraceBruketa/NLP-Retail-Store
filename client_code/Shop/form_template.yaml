@@ -10,11 +10,42 @@ components:
   name: spacer_1
   properties: {height: 49}
   type: Spacer
-- components: []
-  layout_properties: {full_width_row: true, grid_position: 'VXNQSP,IHSNBX'}
-  name: flow_panel_1
-  properties: {align: justify, background: '', border: '', foreground: '', role: flow-flexer, spacing: medium, spacing_above: small, spacing_below: small, tooltip: '', visible: true}
-  type: FlowPanel
+- components:
+  - event_bindings: {show: image_1_show}
+    layout_properties: {width: 970, x: 0, y: 0}
+    name: image_1
+    properties:
+      display_mode: fill_width
+      height: 581.2166748046875
+      horizontal_align: center
+      margin: [null, 0, null, 0]
+      role: null
+      source: _/theme/Fashion-Aesthetics.jpg
+      visible: true
+    type: Image
+  - components:
+    - layout_properties: {grid_position: 'SGGGBS,QXTGHF'}
+      name: text_box_1
+      properties:
+        background: theme:Neutral
+        bold: true
+        font_size: 20
+        foreground: theme:Secondary 700
+        margin: [null, null, 0, null]
+        text: 'Describe Your Dream Outfit ... '
+      type: TextBox
+    - layout_properties: {grid_position: 'KEZVBG,MEDUHG'}
+      name: transparent_box_1
+      properties: {role: transparent-box}
+      type: ColumnPanel
+    layout_properties: {width: 694.38330078125, x: 129.13331604003906, y: 423.99998474121094}
+    name: transparent_box_2
+    properties: {role: transparent-box}
+    type: ColumnPanel
+  layout_properties: {grid_position: 'GFVVOB,EVRSDE'}
+  name: xy_panel_1
+  properties: {height: 863.4500122070312}
+  type: XYPanel
 - layout_properties: {grid_position: 'CVHVKQ,NABFBO'}
   name: spacer_2
   properties: {height: 50}

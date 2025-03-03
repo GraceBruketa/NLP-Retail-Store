@@ -19,3 +19,8 @@ class Shop(ShopTemplate):
     products = app_tables.products.search()
     for p in products:
       self.flow_panel_1.add_component(Product(item=p), width='30%')
+
+  def image_1_show(self, **event_args):
+    """This method is called when the Image is shown on the screen"""
+    pass
+    
