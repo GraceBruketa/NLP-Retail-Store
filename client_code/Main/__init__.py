@@ -91,7 +91,7 @@ class Main(MainTemplate):
     """This method is called when the user presses Enter in this text box"""
     alert(event_args['sender'].text)
     
-   
+    search = self.searchInput.text
     anvil.server.call('procces_words',search)
     
 
