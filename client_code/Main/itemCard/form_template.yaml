@@ -2,7 +2,7 @@ components:
 - data_bindings: []
   layout_properties: {grid_position: 'PVNCEJ,SDRSEJ'}
   name: image_1
-  properties: {display_mode: shrink_to_fit, source: _/theme/10866.jpg}
+  properties: {display_mode: shrink_to_fit, source: 'https://images.dog.ceo/breeds/mastiff-english/2.jpg'}
   type: Image
 - layout_properties: {grid_position: 'PVNCEJ,PGNOXB WWWURG,WRNFSD'}
   name: itemName
