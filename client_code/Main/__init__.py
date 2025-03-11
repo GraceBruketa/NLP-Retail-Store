@@ -46,24 +46,29 @@ class Main(MainTemplate):
 
   def home_link_click(self, **event_args):
     """This method is called when the link is clicked"""
-    self.navigate(self.home_link, Home())
+    home = Home()
+    open_form(home)
 
 
   def shop_link_click(self, **event_args):
     """This method is called when the link is clicked"""
-    self.navigate(self.shop_link, Shop())
+    shop = Shop()
+    open_form(shop)
 
   def about_link_click(self, **event_args):
     """This method is called when the link is clicked"""
-    self.navigate(self.about_link, About())
+    about = About()
+    open_form(about)
     
   def contact_link_click(self, **event_args):
     """This method is called when the Link is shown on the screen"""
-    self.navigate(self.contact_link, Contact())
+    contact = Contact()
+    open_form(contact)
 
   def cart_link_click(self, **event_args):
     """This method is called when the link is clicked"""
-    self.navigate(self.cart_link, Cart(items=self.cart_items))
+    cart = Cart()
+    open_form(cart)
 
   def subscribe_button_click(self, **event_args):
     """This method is called when the button is clicked"""
