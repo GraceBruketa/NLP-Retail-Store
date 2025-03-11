@@ -32,10 +32,19 @@ def procces_words(text):
   # Process whole documents
   
   doc = nlp(text)
+
+  noun_phrases = [chunk.text for chunk in doc.noun_chunks]
+  verbs = [token.lemma_ for token in doc if token.pos_ == "VERB"]
+  adjectives = [token.text for token in doc if token.pos_ == "ADJ"]        # Surface form
+  adjectives_lemmas = [token.lemma_ for token in doc if token.pos_ == "ADJ"]  # Lemmatized form
+
+  
   print("Noun phrases:", [chunk.text for chunk in doc.noun_chunks])
+  
   print("Verbs:", [token.lemma_ for token in doc if token.pos_ == "VERB"])
   # extract adjectives
   print("Adjectives:", [token.text for token in doc if token.pos_ == "ADJ"])  # Surface form
   # OR for lemmas (like verbs):
   print("Adjectives (lemmas):", [token.lemma_ for token in doc if token.pos_ == "ADJ"])
+  
   
