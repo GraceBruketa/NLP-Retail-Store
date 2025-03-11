@@ -33,7 +33,7 @@ def procces_words(text):
   
   doc = nlp(text)
 
-  # noun_phrases = [chunk.text for chunk in doc.noun_chunks]
+  noun_phrases = [chunk.text for chunk in doc.noun_chunks]
   promtVerbs = [token.lemma_.lower() for token in doc if token.pos_ == "VERB"]
   promtAdjectives = [token.text.lower() for token in doc if token.pos_ == "ADJ"]        # Surface form
   # adjectives_lemmas = [token.lemma_ for token in doc if token.pos_ == "ADJ"]  # Lemmatized form
@@ -47,10 +47,12 @@ def procces_words(text):
     verbPoint = len(set(promtVerbs) & set(verbs))
     abjectivePoint = len( set(adjectives) & set(promtAdjectives))
     val['points'] = abjectivePoint + verbPoint
+    # ad point for noun phrases and nouns , andphares give more points
     
     
   sorted_column_values = sorted(column_values, key=lambda x: x['points'], reverse=True)
   print(sorted_column_values)
+  print(noun_phrases)
   return sorted_column_values
   
   # print("Verbs:", [token.lemma_ for token in doc if token.pos_ == "VERB"])
