@@ -33,18 +33,32 @@ def procces_words(text):
   
   doc = nlp(text)
 
-  noun_phrases = [chunk.text for chunk in doc.noun_chunks]
-  verbs = [token.lemma_ for token in doc if token.pos_ == "VERB"]
-  adjectives = [token.text for token in doc if token.pos_ == "ADJ"]        # Surface form
-  adjectives_lemmas = [token.lemma_ for token in doc if token.pos_ == "ADJ"]  # Lemmatized form
+  # noun_phrases = [chunk.text for chunk in doc.noun_chunks]
+  promtVerbs = [token.lemma_.lower() for token in doc if token.pos_ == "VERB"]
+  promtAdjectives = [token.text.lower() for token in doc if token.pos_ == "ADJ"]        # Surface form
+  # adjectives_lemmas = [token.lemma_ for token in doc if token.pos_ == "ADJ"]  # Lemmatized form
 
+  column_values = [{"id": row["id"], "Description": row["Description"],"points":0} for row in app_tables.items.search()]
   
-  print("Noun phrases:", [chunk.text for chunk in doc.noun_chunks])
+  for val in column_values:
+    doc = nlp(val['Description'])
+    verbs = [token.lemma_.lower() for token in doc if token.pos_ == "VERB"]
+    adjectives = [token.text.lower() for token in doc if token.pos_ == "ADJ"]
+    verbPoint = len(set(promtVerbs) & set(verbs))
+    abjectivePoint = len( set(adjectives) & set(promtAdjectives))
+    val['points'] = abjectivePoint + verbPoint
+    
+    
+  sorted_column_values = sorted(column_values, key=lambda x: x['points'], reverse=True)
+  print(sorted_column_values)
+  return sorted_column_values
   
-  print("Verbs:", [token.lemma_ for token in doc if token.pos_ == "VERB"])
-  # extract adjectives
-  print("Adjectives:", [token.text for token in doc if token.pos_ == "ADJ"])  # Surface form
-  # OR for lemmas (like verbs):
-  print("Adjectives (lemmas):", [token.lemma_ for token in doc if token.pos_ == "ADJ"])
+  # print("Verbs:", [token.lemma_ for token in doc if token.pos_ == "VERB"])
+  # # extract adjectives
+  # print("Adjectives:", [token.text for token in doc if token.pos_ == "ADJ"])  # Surface form
+  # # OR for lemmas (like verbs):
+  # print("Adjectives (lemmas):", [token.lemma_ for token in doc if token.pos_ == "ADJ"])
   
+  
+
   
