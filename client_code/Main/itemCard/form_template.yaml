@@ -1,5 +1,6 @@
 components:
-- data_bindings: []
+- data_bindings:
+  - {code: 'self.item['''']', property: source, writeback: false}
   layout_properties: {grid_position: 'PVNCEJ,SDRSEJ'}
   name: image_1
   properties: {display_mode: shrink_to_fit, source: _/theme/10866.jpg}
