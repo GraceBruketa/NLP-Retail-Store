@@ -6,13 +6,13 @@ components:
   type: Image
 - layout_properties: {grid_position: 'PVNCEJ,PGNOXB WWWURG,WRNFSD'}
   name: itemName
-  properties: {}
+  properties: {text: Item Name}
   type: Label
 - layout_properties: {grid_position: 'PVNCEJ,PGNOXB GZDVPQ,IIOWWL'}
   name: iteam_description
-  properties: {}
+  properties: {content: Item Description}
   type: RichText
-- layout_properties: {grid_position: 'KKBBKK,OFBIIH'}
+- layout_properties: {grid_position: 'UUNQBS,NCYMER'}
   name: buyButton
   properties: {text: Buy}
   type: Button
