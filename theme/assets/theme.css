@@ -772,7 +772,6 @@ input.anvil-component, textarea.anvil-component, .anvil-component select, .anvil
   background-color: %color:Surface Variant%;
   color: %color:On Surface Variant%;
   box-shadow: none;
-  placeholder: #6750A4;
 }
 
 .anvil-dropdown {
@@ -783,10 +782,11 @@ input.anvil-component, textarea.anvil-component, .anvil-component select, .anvil
   font-size: inherit;
 }
 
-input.anvil-component, .anvil-component select, .anvil-datepicker input, textarea.anvil-component {
+input.anvil-component, .anvil-component select, .anvil-datepicker input, textarea.anvil-component :: placeholder{
   padding: 8px 16px;
   border: 0;
   border-bottom: 1px solid %color:Outline%;
+  color: #6750A4;
 }
 
 .anvil-dropdown select.form-control {
