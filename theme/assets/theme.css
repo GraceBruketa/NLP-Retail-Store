@@ -772,6 +772,7 @@ input.anvil-component, textarea.anvil-component, .anvil-component select, .anvil
   background-color: %color:Surface Variant%;
   color: %color:On Surface Variant%;
   box-shadow: none;
+  placeholder: #6750A4;
 }
 
 .anvil-dropdown {
