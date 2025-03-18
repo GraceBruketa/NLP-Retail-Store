@@ -42,6 +42,7 @@ def procces_words(text):
   
   for val in column_values:
     doc = nlp(val['Description'])
+    noun_phrases_
     verbs = [token.lemma_.lower() for token in doc if token.pos_ == "VERB"]
     adjectives = [token.text.lower() for token in doc if token.pos_ == "ADJ"]
     verbPoint = len(set(promtVerbs) & set(verbs))
@@ -51,8 +52,10 @@ def procces_words(text):
     
     
   sorted_column_values = sorted(column_values, key=lambda x: x['points'], reverse=True)
-  print(sorted_column_values)
+  # print(sorted_column_values)
   print(noun_phrases)
+  print(promtVerbs)
+  print(promtAdjectives)
   return sorted_column_values
   
   # print("Verbs:", [token.lemma_ for token in doc if token.pos_ == "VERB"])
