@@ -1,5 +1,6 @@
 from ._anvil_designer import HomeTemplate
 from anvil import *
+import anvil.server
 from ..About import About
 from ..Cart import Cart
 from ..Shop import Shop
@@ -14,7 +15,6 @@ class Home(HomeTemplate):
 
   def search_box_2_pressed_enter(self, **event_args):
     """This method is called when the user presses Enter in this text box"""
-    from anvil import anvil 
     search = self.search_box_2.text
     anvil.server.call('procces_words',search)
 
