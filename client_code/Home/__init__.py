@@ -24,8 +24,7 @@ class Home(HomeTemplate):
     open_form(home)
 
   def home_button_click(self, **event_args):
-  def home_button_click(self, **event_args):
-  def home_button_click(self, **event_args):
+    """This method is called when the button is clicked"""
     """This method is called when the button is clicked"""
     home = Home()
     open_form(home)
