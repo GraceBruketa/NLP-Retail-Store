@@ -1,13 +1,27 @@
 components:
 - components:
-  - layout_properties: {grid_position: 'YCXFKO,BWEYJP'}
+  - data_bindings: []
+    layout_properties: {grid_position: 'SIVRVM,UHNIVT'}
+    name: label_1
+    properties: {align: center, bold: false, font: Yeseva One, font_size: 21, foreground: 'theme:Primary', text: Find Your Style Today!}
+    type: Label
+  - event_bindings: {pressed_enter: text_box_1_pressed_enter}
+    layout_properties: {grid_position: 'LUHROD,RLDNYY'}
     name: text_box_1
-    properties: {}
+    properties: {font: Yeseva One, foreground: 'theme:Primary', text: 'What are you looking for?'}
     type: TextBox
   - components:
-    - layout_properties: {col_xs: 1, row: SJQNFK, width_xs: 4}
+    - layout_properties: {col_xs: 0, row: BBPFGT, width_xs: 4}
+      name: image_2
+      properties: {height: 306.066650390625, source: _/theme/titleimg.jpg}
+      type: Image
+    - layout_properties: {col_xs: 4, row: BBPFGT, width_xs: 4}
+      name: image_3
+      properties: {height: 306.4000244140625, source: _/theme/4u6a8017small.jpg}
+      type: Image
+    - layout_properties: {col_xs: 8, row: BBPFGT, width_xs: 4}
       name: image_1
-      properties: {height: 424.566650390625, source: _/theme/IMG_8322+copy.jpg}
+      properties: {height: 306.83331298828125, source: _/theme/IMG_8322+copy.jpg}
       type: Image
     layout_properties: {grid_position: 'GWEBTK,IEUQFJ'}
     name: grid_panel_1
@@ -15,7 +29,7 @@ components:
     type: GridPanel
   layout_properties: {slot: default}
   name: content_panel
-  properties: {col_widths: '{}'}
+  properties: {col_widths: '{}', foreground: 'theme:Primary'}
   type: ColumnPanel
 - layout_properties: {slot: nav-right}
   name: navbar_links
