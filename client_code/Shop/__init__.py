@@ -44,5 +44,6 @@ class Shop(ShopTemplate):
   def search_box_pressed_enter(self, **event_args):
     """This method is called when the user presses Enter in this text box"""
     search = self.search_box.text
-    anvil.server.call('procces_words',search)
+    item_list = anvil.server.call('procces_words',search)
+    self.repeating_panel_1.items = item_list[:13]
   

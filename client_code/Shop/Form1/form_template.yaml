@@ -1,19 +1,23 @@
 components:
-- layout_properties: {grid_position: 'BWWZTY,SRROTA'}
+- data_bindings:
+  - {code: 'self.item[''img'']', property: source, writeback: false}
+  layout_properties: {grid_position: 'BWWZTY,SRROTA'}
   name: product_image_1
-  properties: {}
+  properties: {source: ''}
   type: Image
 - data_bindings:
-  - {code: 'self.item['''']', property: content, writeback: false}
+  - {code: 'self.item[''productDisplayName'']', property: content, writeback: false}
   layout_properties: {grid_position: 'BWWZTY,XLAEAZ CVTASP,RDUNBV'}
   name: title_text_1
   properties: {content: '', format: plain_text}
   type: RichText
-- layout_properties: {grid_position: 'BWWZTY,XLAEAZ HRJTRM,CWNYTO'}
+- data_bindings:
+  - {code: 'self.item[''Description'']', property: content, writeback: false}
+  layout_properties: {grid_position: 'BWWZTY,XLAEAZ HRJTRM,CWNYTO'}
   name: description_text_2
   properties: {}
   type: RichText
-- layout_properties: {grid_position: 'HTRVPA,HAVSIP'}
+- layout_properties: {grid_position: 'BWWZTY,XLAEAZ DXDKJK,EZOYNR'}
   name: BUY_button_
   properties: {text: Buy}
   type: Button

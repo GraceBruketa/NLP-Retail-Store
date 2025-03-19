@@ -38,21 +38,22 @@ def procces_words(text):
   promtAdjectives = [token.text.lower() for token in doc if token.pos_ == "ADJ"]        # Surface form
   # adjectives_lemmas = [token.lemma_ for token in doc if token.pos_ == "ADJ"]  # Lemmatized form
 
-  column_values = [{"id": row["id"], "Description": row["Description"],"points":0} for row in app_tables.items.search()]
-  
+  column_values = [{"id": row["id"], "productDisplayName":row["productDisplayName"] ,"Description": row["Description"],"points":0 ,"img": " _/theme/"+str(row['id'])+".jpg"} for row in app_tables.items.search()]
+
   for val in column_values:
     doc = nlp(val['Description'])
-    noun_phrases_
+    nouns = [chunk.text for chunk in doc.noun_chunks]
     verbs = [token.lemma_.lower() for token in doc if token.pos_ == "VERB"]
     adjectives = [token.text.lower() for token in doc if token.pos_ == "ADJ"]
     verbPoint = len(set(promtVerbs) & set(verbs))
+    nounsPoint = len(set(nouns) & set(noun_phrases))
     abjectivePoint = len( set(adjectives) & set(promtAdjectives))
-    val['points'] = abjectivePoint + verbPoint
+    val['points'] = abjectivePoint + verbPoint + nounsPoint
     # add point for noun phrases and nouns , andphares give more points
     
     
   sorted_column_values = sorted(column_values, key=lambda x: x['points'], reverse=True)
-  # print(sorted_column_values)
+  print(sorted_column_values)
   print(noun_phrases)
   print(promtVerbs)
   print(promtAdjectives)
