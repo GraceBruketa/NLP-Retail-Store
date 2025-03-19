@@ -44,7 +44,7 @@ components:
     type: GridPanel
   - layout_properties: {grid_position: 'VVDIUR,SUNWRU'}
     name: repeating_panel_1
-    properties: {item_template: Shop.itemCard}
+    properties: {item_template: Shop.Form1}
     type: RepeatingPanel
   layout_properties: {slot: default}
   name: content_panel
