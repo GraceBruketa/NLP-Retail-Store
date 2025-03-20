@@ -4,7 +4,8 @@ components:
     name: label_1
     properties: {align: center, bold: false, font: Yeseva One, font_size: 21, foreground: 'theme:Primary', text: Find Your Style Today!}
     type: Label
-  - event_bindings: {pressed_enter: search_box_2_pressed_enter}
+  - data_bindings: []
+    event_bindings: {pressed_enter: search_box_2_pressed_enter}
     layout_properties: {grid_position: 'LUHROD,RLDNYY'}
     name: search_box_2
     properties: {font: Yeseva One, foreground: 'theme:Primary', hide_text: false, placeholder: 'What are you looking for?', text: ''}
