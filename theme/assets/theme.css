@@ -10,7 +10,6 @@
 
 .content > .placeholder {
   margin: 16px;
-  color: %Primary%;
   font-size: 18px;
   outline: 1px dotted;
   padding: 16px;
@@ -105,9 +104,6 @@ body {
   background-color: %color:Background%;
   min-height: calc(100vh - 56px)
 }
-.anvil-component::placeholder {
-  color: white;
-}
 
 @media print {
   body {
@@ -154,6 +150,7 @@ color: %color:On Primary Container%;
 }
 
 .anvil-role-input-placeholder {
+ color: %color:On Primary Container%
 }
 
 .anvil-role-body > .label-text, .anvil-role-body .link-text {
