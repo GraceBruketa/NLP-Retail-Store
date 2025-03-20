@@ -17,7 +17,8 @@ components:
   name: description_text_2
   properties: {}
   type: RichText
-- layout_properties: {grid_position: 'BWWZTY,XLAEAZ DXDKJK,EZOYNR'}
+- event_bindings: {click: BUY_button__click}
+  layout_properties: {grid_position: 'BWWZTY,XLAEAZ DXDKJK,EZOYNR'}
   name: BUY_button_
   properties: {text: Buy}
   type: Button

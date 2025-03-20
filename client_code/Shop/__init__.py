@@ -46,4 +46,5 @@ class Shop(ShopTemplate):
     search = self.search_box.text
     item_list = anvil.server.call('procces_words',search)
     self.repeating_panel_1.items = item_list[:13]
+    self.grid_panel_1.visible = False 
   

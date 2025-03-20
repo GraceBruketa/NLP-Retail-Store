@@ -7,7 +7,7 @@ from anvil.google.drive import app_files
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-
+import globalVars
 
 class Form1(Form1Template):
   def __init__(self, **properties):
@@ -15,3 +15,8 @@ class Form1(Form1Template):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
+
+  def BUY_button__click(self, **event_args):
+    """This method is called when the button is clicked"""
+    # globalVars.addItems(self.item)
+    

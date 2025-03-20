@@ -53,7 +53,7 @@ def procces_words(text):
     
     
   sorted_column_values = sorted(column_values, key=lambda x: x['points'], reverse=True)
-  print(sorted_column_values)
+  # print(sorted_column_values)
   print(noun_phrases)
   print(promtVerbs)
   print(promtAdjectives)
