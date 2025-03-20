@@ -105,6 +105,9 @@ body {
   background-color: %color:Background%;
   min-height: calc(100vh - 56px)
 }
+input.anvil-component::placeholder {
+  color: white;
+}
 
 @media print {
   body {
