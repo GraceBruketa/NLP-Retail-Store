@@ -80,7 +80,7 @@ db_schema:
     - admin_ui: {width: 200}
       name: subCategory
       type: string
-    - admin_ui: {width: 200}
+    - admin_ui: {order: 8, width: 200}
       name: productDisplayName
       type: string
     - admin_ui: {width: 200}
