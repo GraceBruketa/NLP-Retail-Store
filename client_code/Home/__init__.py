@@ -1,10 +1,9 @@
 from ._anvil_designer import HomeTemplate
 from anvil import *
+import anvil.server
 from ..About import About
 from ..Cart import Cart
 from ..Shop import Shop
-
-
 
 
 class Home(HomeTemplate):
@@ -14,9 +13,10 @@ class Home(HomeTemplate):
 
     # Any code you write here will run before the form opens.
 
-  def text_box_1_pressed_enter(self, **event_args):
+  def search_box_2_pressed_enter(self, **event_args):
     """This method is called when the user presses Enter in this text box"""
-    self.navigate(self.home_link, Home)
+    search = self.search_box_2.text
+    anvil.server.call('procces_words',search)
 
   def main_button_click(self, **event_args):
     """This method is called when the button is clicked"""
