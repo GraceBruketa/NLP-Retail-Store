@@ -10,7 +10,7 @@
 
 .content > .placeholder {
   margin: 16px;
-  color: %color:Primary%;
+  color: %Primary%;
   font-size: 18px;
   outline: 1px dotted;
   padding: 16px;
@@ -151,6 +151,9 @@ color: %color:On Primary Container%;
 .anvil-role-input-prompt {
   font-size: 16px;
   line-height: 1.5;
+}
+
+.anvil-role-input-placeholder {
 }
 
 .anvil-role-body > .label-text, .anvil-role-body .link-text {
