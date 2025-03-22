@@ -32,6 +32,7 @@ def procces_words(text):
   # Process whole documents
   
   doc = nlp(text)
+ 
 
   noun_phrases = [chunk.text for chunk in doc.noun_chunks]
   promtVerbs = [token.lemma_.lower() for token in doc if token.pos_ == "VERB"]
@@ -41,19 +42,33 @@ def procces_words(text):
   column_values = [{"id": row["id"], "productDisplayName":row["productDisplayName"] ,"Description": row["Description"],"points":0 ,"img": " _/theme/"+str(row['id'])+".jpg"} for row in app_tables.items.search()]
 
   for val in column_values:
+    namedoc = nlp(val['productDisplayName'])
+    
     doc = nlp(val['Description'])
     nouns = [chunk.text for chunk in doc.noun_chunks]
+    nameNouns = [chunk.text for chunk in namedoc.noun_chunks]
+    
     verbs = [token.lemma_.lower() for token in doc if token.pos_ == "VERB"]
+    nameVerbs = [token.lemma_.lower() for token in namedoc if token.pos_ == "VERB"]
+    
     adjectives = [token.text.lower() for token in doc if token.pos_ == "ADJ"]
+    nameAdj = [token.text.lower() for token in namedoc if token.pos_ == "ADJ"]
+    
     verbPoint = len(set(promtVerbs) & set(verbs))
     nounsPoint = len(set(nouns) & set(noun_phrases))
     abjectivePoint = len( set(adjectives) & set(promtAdjectives))
-    val['points'] = abjectivePoint + verbPoint + nounsPoint
+
+    verbPointName = len(set(promtVerbs) & set(nameVerbs))
+    nounsPointName= len(set(nameNouns) & set(noun_phrases))
+    
+    abjectivePointName = len( set(nameAdj) & set(promtAdjectives))
+    
+    val['points'] = abjectivePoint + verbPoint + nounsPoint + verbPointName + nounsPointName + abjectivePointName
     # add point for noun phrases and nouns , andphares give more points
     
     
   sorted_column_values = sorted(column_values, key=lambda x: x['points'], reverse=True)
-  # print(sorted_column_values)
+  print(sorted_column_values)
   print(noun_phrases)
   print(promtVerbs)
   print(promtAdjectives)
