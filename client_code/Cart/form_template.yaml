@@ -46,11 +46,13 @@ components:
   - layout_properties: {grid_position: 'UPLNWC,VBMTRV'}
     name: label_1
     properties:
+      align: center
       font: Yeseva One
       font_size: 30
+      foreground: theme:Primary
       spacing:
         padding: [null, 0, null, null]
-      text: Cart
+      text: Your Cart
     type: Label
   - layout_properties: {grid_position: 'HJDFBZ,SFWLFB'}
     name: repeating_panel_1
