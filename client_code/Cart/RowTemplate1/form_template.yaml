@@ -1,5 +1,7 @@
 components:
-- layout_properties: {column: JKSDUP}
+- data_bindings:
+  - {code: 'self.item['''']', property: source, writeback: false}
+  layout_properties: {column: JKSDUP}
   name: image_1
   properties: {}
   type: Image
@@ -30,6 +32,12 @@ components:
   name: grid_panel_1
   properties: {}
   type: GridPanel
+- data_bindings:
+  - {code: 'self.item['''']', property: text, writeback: false}
+  layout_properties: {column: VJQQOR}
+  name: label_1
+  properties: {}
+  type: Label
 container:
   properties:
     margin: [null, 0, null, 0]
