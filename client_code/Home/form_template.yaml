@@ -28,13 +28,19 @@ components:
     name: grid_panel_1
     properties: {}
     type: GridPanel
+  - layout_properties: {grid_position: 'LLGVTX,MBTOTD'}
+    name: grid_panel_2
+    properties: {}
+    type: GridPanel
   layout_properties: {slot: default}
   name: content_panel
-  properties: {col_widths: '{}', foreground: 'theme:Primary'}
+  properties: {background: '#FFFFFF', col_widths: '{}', foreground: 'theme:Primary'}
   type: ColumnPanel
 - components:
-  - name: button_3
+  - layout_properties: {}
+    name: button_3
     properties:
+      background: theme:Secondary Container
       icon: fa:bell
       icon_align: right
       spacing:
@@ -45,6 +51,7 @@ components:
   - layout_properties: {}
     name: button_1
     properties:
+      background: theme:Secondary Container
       icon: fa:user
       icon_align: right
       spacing:
@@ -53,7 +60,7 @@ components:
     type: Button
   - layout_properties: {}
     name: button_2
-    properties: {icon: 'fa:shopping-cart', icon_align: right, text: ''}
+    properties: {background: 'theme:Secondary Container', icon: 'fa:shopping-cart', icon_align: right, text: ''}
     type: Button
   data_bindings: []
   layout_properties: {slot: nav-right}
@@ -96,6 +103,7 @@ components:
   layout_properties: {slot: title}
   name: main_button
   properties:
+    background: theme:Secondary Container
     bold: true
     font: Yeseva One
     font_size: 22
