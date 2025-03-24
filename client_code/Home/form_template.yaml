@@ -3,7 +3,7 @@ components:
   - data_bindings: []
     layout_properties: {grid_position: 'SIVRVM,UHNIVT'}
     name: label_1
-    properties: {align: center, bold: false, font: Yeseva One, font_size: 21, foreground: 'theme:Primary', text: Find Your Style Today!}
+    properties: {align: center, bold: false, font: Yeseva One, font_size: 21, foreground: 'theme:Primary', text: Describe Your Style Today!}
     type: Label
   - data_bindings: []
     event_bindings: {pressed_enter: search_box_2_pressed_enter}
@@ -32,9 +32,37 @@ components:
   name: content_panel
   properties: {col_widths: '{}', foreground: 'theme:Primary'}
   type: ColumnPanel
-- layout_properties: {slot: nav-right}
+- components:
+  - name: button_3
+    properties:
+      icon: fa:bell
+      icon_align: right
+      spacing:
+        margin: [null, null, null, 54]
+      spacing_below: small
+      text: ''
+    type: Button
+  - layout_properties: {}
+    name: button_1
+    properties:
+      icon: fa:user
+      icon_align: right
+      spacing:
+        margin: [null, 0, null, 18]
+      text: ''
+    type: Button
+  - layout_properties: {}
+    name: button_2
+    properties: {icon: 'fa:shopping-cart', icon_align: right, text: ''}
+    type: Button
+  data_bindings: []
+  layout_properties: {slot: nav-right}
   name: navbar_links
-  properties: {}
+  properties:
+    align: right
+    gap: tiny
+    spacing:
+      margin: [0, 0, null, 0]
   type: FlowPanel
 - components:
   - event_bindings: {click: home_button_click}
