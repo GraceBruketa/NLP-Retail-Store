@@ -101,7 +101,7 @@ body {
   font-family: Roboto, Noto, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.4286;
-  color: %color:On Surface%;
+  color: %color:On Primary Container%;
   background-color: %color:Background%;
   min-height: calc(100vh - 56px)
 }
@@ -826,7 +826,7 @@ input.anvil-component::-moz-placeholder, textarea.anvil-component::-moz-placehol
   color: %color:On Surface%;
 }
 input.anvil-component::placeholder, textarea.anvil-component::placeholder  {
-  color: %color:On Surface%;
+  color: %color:Primary%;
 }
 
 .app-bar input.anvil-component::-webkit-input-placeholder, .app-bar textarea.anvil-component::-webkit-input-placeholder {

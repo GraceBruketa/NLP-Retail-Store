@@ -12,7 +12,7 @@ components:
     name: data_grid_1
     properties:
       columns:
-      - {data_key: column_1, id: JKSDUP, title: ' '}
+      - {data_key: column_1, expand: false, id: JKSDUP, title: ' '}
       - {data_key: column_2, id: VJQQOR, title: Price}
       - {data_key: column_3, id: OJLQEN, title: 'Quantity '}
     type: DataGrid
