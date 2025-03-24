@@ -1,12 +1,14 @@
 from ._anvil_designer import CartTemplate
 from anvil import *
 # from ..Home import Home
+from .. import globalVars
 
 
 class Cart(CartTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    self.repeating_panel_1.items = globalVars.cartItems
 
     # Any code you write here will run before the form opens.
 
@@ -33,4 +35,8 @@ class Cart(CartTemplate):
     from ..About import About
     about = About()
     open_form(about)
+
+  def outlined_button_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    print(globalVars.cartItems)
   

@@ -1,5 +1,11 @@
 from ._anvil_designer import ShopTemplate
 from anvil import *
+import anvil.server
+import anvil.google.auth, anvil.google.drive
+from anvil.google.drive import app_files
+import anvil.tables as tables
+import anvil.tables.query as q
+from anvil.tables import app_tables
 # from ..Home import Home
 
 
@@ -34,4 +40,11 @@ class Shop(ShopTemplate):
     from ..About import About
     about = About()
     open_form(about)
+
+  def search_box_pressed_enter(self, **event_args):
+    """This method is called when the user presses Enter in this text box"""
+    search = self.search_box.text
+    item_list = anvil.server.call('procces_words',search)
+    self.repeating_panel_1.items = item_list[:13]
+    self.grid_panel_1.visible = False 
   
