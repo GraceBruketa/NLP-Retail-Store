@@ -16,7 +16,9 @@ class Home(HomeTemplate):
   def search_box_2_pressed_enter(self, **event_args):
     """This method is called when the user presses Enter in this text box"""
     search = self.search_box_2.text
-    anvil.server.call('procces_words',search)
+    items = anvil.server.call('procces_words',search)
+    self.repeating_panel_1.items = items
+    
 
   def main_button_click(self, **event_args):
     """This method is called when the button is clicked"""
