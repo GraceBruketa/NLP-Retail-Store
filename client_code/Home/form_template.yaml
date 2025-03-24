@@ -1,7 +1,6 @@
 components:
 - components:
-  - data_bindings: []
-    layout_properties: {grid_position: 'SIVRVM,UHNIVT'}
+  - layout_properties: {grid_position: 'SIVRVM,UHNIVT'}
     name: label_1
     properties: {align: center, bold: false, font: Yeseva One, font_size: 21, foreground: 'theme:Primary', text: Find Your Style Today!}
     type: Label
