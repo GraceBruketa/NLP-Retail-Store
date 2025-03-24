@@ -46,6 +46,7 @@ components:
   - layout_properties: {grid_position: 'UPLNWC,VBMTRV'}
     name: label_1
     properties:
+      font: Yeseva One
       font_size: 30
       spacing:
         padding: [null, 0, null, null]
