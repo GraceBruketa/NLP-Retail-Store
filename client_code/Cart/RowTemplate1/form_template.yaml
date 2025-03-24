@@ -1,6 +1,6 @@
 components:
 - data_bindings:
-  - {code: 'self.item['''']', property: source, writeback: false}
+  - {code: 'self.item[''img'']', property: source, writeback: false}
   layout_properties: {column: JKSDUP}
   name: image_1
   properties: {}
@@ -33,7 +33,7 @@ components:
   properties: {}
   type: GridPanel
 - data_bindings:
-  - {code: 'self.item['''']', property: text, writeback: false}
+  - {code: 'self.item[''productDisplayName'']', property: text, writeback: false}
   layout_properties: {column: VJQQOR}
   name: label_1
   properties: {}

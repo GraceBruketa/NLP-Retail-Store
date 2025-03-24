@@ -26,10 +26,10 @@ components:
     name: grid_panel_1
     properties: {}
     type: GridPanel
-  - layout_properties: {grid_position: 'LLGVTX,MBTOTD'}
-    name: grid_panel_2
-    properties: {}
-    type: GridPanel
+  - layout_properties: {grid_position: 'LLCEUL,YXEXCN'}
+    name: repeating_panel_1
+    properties: {item_template: Shop.Form1}
+    type: RepeatingPanel
   layout_properties: {slot: default}
   name: content_panel
   properties: {background: '#FFFFFF', col_widths: '{}', foreground: 'theme:Primary'}
