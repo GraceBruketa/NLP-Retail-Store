@@ -8,7 +8,7 @@ import anvil.server
 from datetime import datetime
 import stripe
 import en_core_web_sm
-import cart
+# import cart
 import anvil.email
 
 nlp = en_core_web_sm.load()
