@@ -1,0 +1,37 @@
+components:
+- layout_properties: {column: JKSDUP}
+  name: image_1
+  properties: {}
+  type: Image
+- components:
+  - event_bindings: {click: add_qty_click}
+    layout_properties: {col_xs: 0, row: UNJBVL, width_xs: 4}
+    name: add_qty
+    properties: {align: center, icon: 'fa:plus', text: ''}
+    type: Button
+  - data_bindings: []
+    event_bindings: {show: quantity_show}
+    layout_properties: {col_xs: 4, row: UNJBVL, width_xs: 4}
+    name: quantity
+    properties:
+      align: center
+      text: |
+        0
+    type: Label
+  - layout_properties: {col_xs: 8, row: UNJBVL, width_xs: 4}
+    name: subtract_qty
+    properties:
+      icon: fa:minus
+      spacing:
+        margin: [null, 0, null, null]
+      text: ''
+    type: Button
+  layout_properties: {column: OJLQEN}
+  name: grid_panel_1
+  properties: {}
+  type: GridPanel
+container:
+  properties:
+    margin: [null, 0, null, 0]
+  type: DataRowPanel
+is_package: true
