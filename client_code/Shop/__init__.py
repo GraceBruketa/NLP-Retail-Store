@@ -47,4 +47,12 @@ class Shop(ShopTemplate):
     item_list = anvil.server.call('procces_words',search)
     self.repeating_panel_1.items = item_list[:13]
     self.grid_panel_1.visible = False 
+
+
+
+  def button_2_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    from ..Cart import Cart
+    cart = Cart()
+    open_form(cart)
   

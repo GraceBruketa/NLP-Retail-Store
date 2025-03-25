@@ -102,6 +102,8 @@ body {
   font-size: 14px;
   line-height: 1.4286;
   color: %color:On Primary Container%;
+  color: %color:On Primary Container%;
+  color: %color:On Primary Container%;
   background-color: %color:Background%;
   min-height: calc(100vh - 56px)
 }

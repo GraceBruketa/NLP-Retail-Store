@@ -39,4 +39,8 @@ class Cart(CartTemplate):
   def outlined_button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
     print(globalVars.cartItems)
+
+  def button_2_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    pass
   
