@@ -56,7 +56,8 @@ components:
         margin: [null, 0, null, 18]
       text: ''
     type: Button
-  - layout_properties: {}
+  - event_bindings: {click: button_2_click}
+    layout_properties: {}
     name: button_2
     properties: {background: 'theme:Secondary Container', icon: 'fa:shopping-cart', icon_align: right, text: ''}
     type: Button

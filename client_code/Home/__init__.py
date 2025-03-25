@@ -46,6 +46,10 @@ class Home(HomeTemplate):
     """This method is called when the button is clicked"""
     about = About()
     open_form(about)
+
+  def button_2_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form(cart)
   
     
     
