@@ -89,7 +89,7 @@ components:
       type: Label
     - layout_properties: {col_xs: 4, row: SMZKQH, width_xs: 6}
       name: canvas_1_copy_copy_2
-      properties: {background: 'theme:Secondary Container', foreground: 'theme:Secondary', height: 1.91668701171875}
+      properties: {background: 'theme:Secondary Container', foreground: 'theme:Secondary', height: 3.26666259765625}
       type: Canvas
     - layout_properties: {col_xs: 2, row: ZMQDCG, width_xs: 2}
       name: label_5
