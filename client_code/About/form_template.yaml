@@ -147,7 +147,42 @@ components:
   name: content_panel
   properties: {}
   type: ColumnPanel
-- layout_properties: {slot: nav-right}
+- components:
+  - components:
+    - layout_properties: {}
+      name: button_3
+      properties:
+        background: theme:Secondary Container
+        icon: fa:bell
+        icon_align: right
+        spacing:
+          margin: [null, null, null, 54]
+        spacing_below: small
+        text: ''
+      type: Button
+    - layout_properties: {}
+      name: button_1
+      properties:
+        background: theme:Secondary Container
+        icon: fa:user
+        icon_align: right
+        spacing:
+          margin: [null, 0, null, 18]
+        text: ''
+      type: Button
+    - event_bindings: {click: button_2_click}
+      layout_properties: {}
+      name: button_2
+      properties: {background: 'theme:Secondary Container', icon: 'fa:shopping-cart', icon_align: right, text: ''}
+      type: Button
+    name: navbar_links_copy
+    properties:
+      align: right
+      gap: tiny
+      spacing:
+        margin: [0, 0, null, 0]
+    type: FlowPanel
+  layout_properties: {slot: nav-right}
   name: navbar_links
   properties: {}
   type: FlowPanel
